@@ -12,6 +12,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --light-gray: rgba(0,0,0,.05);
+  --gray: #414549;
+  --white: white;
+
+  --font-medium: 16px;
+  --font-base: 14px;
+  --font-big: 22px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
 }
 
 a {
@@ -21,14 +39,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -60,10 +70,10 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /*max-width: 1280px;*/
+  /*margin: 0 auto;*/
+  /*padding: 2rem;*/
+  /*text-align: center;*/
 }
 
 @media (prefers-color-scheme: light) {
