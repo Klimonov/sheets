@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue'
-    import Logo from './Logo.vue';
-    import Search from './Search.vue';
+    import AppLogo from 'components/AppLogo.vue';
+    import Search from 'components/home/Search.vue';
 
     // defineProps<{ msg: string }>()
 
@@ -11,7 +11,7 @@
 <template>
     <div class="header">
         <AppIcon size="20" icon="mdiMenu" />
-        <Logo />
+        <AppLogo text="Таблицы" />
         <Search class="header__search"/>
         <AppIcon size="20" icon="mdiDotsGrid" />
         <AppIcon size="28" icon="mdiAccountCircle" />
@@ -29,7 +29,7 @@
     overflow: hidden;
     height: 64px;
     padding: 8px 20px;
-    color: var(--gray);
+    color: var(--dark-gray);
 
     &__search {
         flex: 1;

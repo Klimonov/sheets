@@ -37,13 +37,13 @@ input {
     font-size: var(--font-medium);
     line-height: 20px;
     background-color: var(--light-gray);
-    color: var(--gray);
+    color: var(--dark-gray);
     &:focus {
         background-color: white;
         border: 1px solid var(--light-gray);
     }
     &::placeholder {
-        color: var(--gray);
+        color: var(--dark-gray);
         font-size: var(--font-medium);
     }
 }

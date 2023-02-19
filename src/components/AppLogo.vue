@@ -1,10 +1,13 @@
 <script setup lang="ts">
+    const props = defineProps<{
+        text: string
+    }>();
 </script>
 
 <template>
     <div class="logo">
         <AppIcon size="40" icon="mdiFileDocumentOutline" />
-        <span class="text">Таблицы</span>
+        <span v-if="text" class="text">{{ props.text }}</span>
     </div>
 </template>
 
@@ -13,7 +16,7 @@
     display: flex;
     gap: 10px;
     padding: 4px;
-    color: var(--gray);
+    color: var(--dark-gray);
     font-size: var(--font-big);
 }
 

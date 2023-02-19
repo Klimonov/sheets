@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import Header from '../components/home/Header.vue'
+    import Header from 'components/home/Header.vue'
     const tables = [
         { name: 'Список дел' },
         { name: 'Годовой бюджет' },
