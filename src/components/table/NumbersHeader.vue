@@ -7,7 +7,7 @@
         <Cell
             v-for="num in 100"
             :key="num"
-            :text.string="num"
+            :text="num"
             class="header-cell"
         >
         </Cell>

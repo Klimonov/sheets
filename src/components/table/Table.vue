@@ -1,9 +1,22 @@
 <script setup lang="ts">
-    import RowHeader from 'components/table/RowHeader.vue';
-    import ColumnHeader from 'components/table/ColumnHeader.vue';
+    import RowHeader from 'components/table/LettersHeader.vue';
+    import ColumnHeader from 'components/table/NumbersHeader.vue';
     import Cell from 'components/table/Cell.vue';
+    import {ref, watch} from 'vue';
 
     const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+    const selectedCell = ref<{row:number, col:number}>({row: 0, col: 0})
+
+    const text = ref('');
+    watch(text, (value: any) => {
+        console.log(value);
+    })
+
+    const selectCell = (rowIndex: number, columnIndex: number) => {
+        selectedCell.value.row = rowIndex
+        selectedCell.value.col = columnIndex
+    }
 </script>
 
 <template>
@@ -19,7 +32,11 @@
                 <Cell
                     v-for="(letter, colIndex) in alphabet.length + 1"
                     :key="num + letter"
-                    :num.string="num"
+                    @click="selectCell(rowIndex, colIndex)"
+                    :num="num"
+                    v-model:text="text"
+                    editable
+                    :selectedCell="selectedCell"
                     :letter="alphabet[colIndex]"
                     :rowIndex="rowIndex"
                     :colIndex="colIndex"
